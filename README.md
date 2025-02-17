@@ -1,6 +1,6 @@
 # AgentFlow
 
-![alt text](https://imgur.com/a/k3BVfFt)
+![AgentFlow](https://i.imgur.com/CCPzJso.jpeg)
 
 
 Open-source platform for building and orchestrating AI agent workflows through a visual interface. Create agent teams, define tasks, and monitor execution in real-time.
