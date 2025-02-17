@@ -124,3 +124,11 @@ async def websocket_endpoint(websocket: WebSocket, crew_id: str):
     except Exception as e:
         logging.error("WebSocket error", exc_info=e)
         await websocket.close()
+
+@app.get("/api/models")
+def get_models():
+    try:
+        models = get_available_models()
+        return {"models": models}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

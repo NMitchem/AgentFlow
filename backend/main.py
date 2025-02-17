@@ -1,7 +1,7 @@
 import asyncio
 import logging
 import uuid
-from fastapi import FastAPI, WebSocket, HTTPException
+from fastapi import FastAPI, WebSocket, HTTPException, Request
 from pydantic import BaseModel
 from typing import List, Dict, Optional
 
@@ -122,3 +122,17 @@ async def websocket_endpoint(websocket: WebSocket, crew_id: str):
     except Exception as e:
         logging.error("WebSocket error", exc_info=e)
         await websocket.close()
+
+
+@app.post("/api/demo")
+async def run_demo_flow(request: Request):
+    try:
+        data = await request.json()
+        result = debate_crew.kickoff(inputs=data)
+        return JSONResponse({
+            "classification": result[0],
+            "description": result[1],
+            "facts": result[2].split('\n')
+        })
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e)) 

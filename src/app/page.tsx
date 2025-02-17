@@ -15,11 +15,11 @@ export default function Home() {
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Accelerate AI Development
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              &nbsp;Enterprise-Ready
+              &nbsp;for Everyone
             </span>
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Build, deploy, and manage AI agents at scale with enterprise-grade security and monitoring.
+            Build and deploy AI agents with open-source simplicity and transparency.
           </p>
           
           <div className="flex justify-center gap-4">
