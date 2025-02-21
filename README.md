@@ -44,15 +44,6 @@ http://localhost:3000
 ## Core Components
 
 ### Agent Creation
-Define agents with specific roles and capabilities:
-```typescript
-const [formData, setFormData] = useState({
-  role: '',
-  goal: '',
-  backstory: '',
-  model: ''
-});
-```
 
 ### Workflow Orchestration
 Create task sequences through the UI or JSON configuration:
